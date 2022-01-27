@@ -1,8 +1,4 @@
 "use strict";
-// Test
-//deleted comments
-//Checking
-
 const fs = require("fs");
 const path = require("path");
 const Sequelize = require("sequelize");
