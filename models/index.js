@@ -2,10 +2,7 @@
 // Test
 // Test 2
 // Test 3
-<<<<<<< HEAD
 // Test 4
-=======
->>>>>>> 0fc2ebde55383ba6f4d61988df117ddcaf8132b6
 // Test 5
 const fs = require("fs");
 const path = require("path");
