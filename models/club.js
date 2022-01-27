@@ -8,14 +8,25 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      //one-to-many
       club.belongsTo(models.user);
+      //many-to-many
+      club.belongsToMany(models.user, {
+        through: "userClub",
+        foreignKey: "clubId",
+      });
     }
   }
   club.init(
     {
-      name: DataTypes.STRING,
-      joinCode: DataTypes.STRING,
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      joinCode: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     },
     {
       sequelize,
