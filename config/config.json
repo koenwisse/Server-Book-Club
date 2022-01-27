@@ -1,6 +1,6 @@
 {
   "development": {
-    "url": "postgres://aycodubf:Se4EWM6FHtNlqAGJpJz-XAJZK6nwjiSA@abul.db.elephantsql.com/aycodubf"
+    "url": "postgres://mmxazuow:6h-El2r62ovzUkkAYw4GjJxW0KhThSFJ@abul.db.elephantsql.com/mmxazuow"
   },
   "test": {
     "username": "root",
