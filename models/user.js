@@ -13,8 +13,8 @@ module.exports = (sequelize, DataTypes) => {
       user.hasMany(models.club);
       user.belongsTo(models.bookDiscussionComment);
       // many-to many
-      user.belongsToMany(models.clubs, {
-        through: "userClub",
+      user.belongsToMany(models.club, {
+        through: "userClubs",
         foreignKey: "userId",
       });
     }

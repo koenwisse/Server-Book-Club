@@ -8,20 +8,20 @@ module.exports = {
         {
           name: "Teja Club",
           joinCode: "join the club",
-          adminId: 1,
+          userId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           name: "Koen Club",
-          adminId: 2,
+          userId: 2,
           joinCode: "join the club",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           name: "Susana Club",
-          adminId: 1,
+          userId: 2,
           joinCode: "join the club",
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -29,7 +29,7 @@ module.exports = {
         {
           name: "Andre Club",
           joinCode: "join the club",
-          adminId: 2,
+          userId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
