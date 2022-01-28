@@ -24,11 +24,11 @@ module.exports = {
 
     await queryInterface.addColumn(
       "bookDiscussionComments",
-      "bookdiscussionId",
+      "bookDiscussionId",
       {
         type: Sequelize.INTEGER,
         references: {
-          model: "bookdiscussions",
+          model: "bookDiscussions",
           key: "id",
         },
         onUpdate: "CASCADE",
@@ -42,7 +42,7 @@ module.exports = {
     await queryInterface.removeColumn("bookDiscussionComments", "userId");
     await queryInterface.removeColumn(
       "bookDiscussionComments",
-      "bookdiscussionId"
+      "bookDiscussionId"
     );
   },
 };

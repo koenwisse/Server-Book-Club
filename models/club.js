@@ -25,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      // "join_book_club_000139_000001"
       joinCode: {
         type: DataTypes.STRING,
         allowNull: false,

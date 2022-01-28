@@ -1,17 +1,18 @@
 "use strict";
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable("bookdiscussions", {
+    await queryInterface.createTable("bookDiscussions", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      bookId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
+      // Swen feedback:
+      // bookId: {
+      //   type: Sequelize.INTEGER,
+      //   allowNull: false,
+      // },
       clubId: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -33,6 +34,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable("bookdiscussions");
+    await queryInterface.dropTable("bookDiscussions");
   },
 };
