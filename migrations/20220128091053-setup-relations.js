@@ -12,6 +12,16 @@ module.exports = {
       onDelete: "SET NULL",
     });
 
+    await queryInterface.addColumn("bookdiscussions", "clubId", {
+      type: Sequelize.INTEGER,
+      references: {
+        model: "clubs",
+        key: "id",
+      },
+      onUpdate: "CASCADE",
+      onDelete: "SET NULL",
+    });
+
     await queryInterface.addColumn("bookDiscussionComments", "userId", {
       type: Sequelize.INTEGER,
       references: {
@@ -39,6 +49,7 @@ module.exports = {
 
   down: async (queryInterface, Sequelize) => {
     await queryInterface.removeColumn("clubs", "adminId");
+    await queryInterface.removeColumn("bookdiscussions", "clubId");
     await queryInterface.removeColumn("bookDiscussionComments", "userId");
     await queryInterface.removeColumn(
       "bookDiscussionComments",
