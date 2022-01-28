@@ -14,15 +14,15 @@ module.exports = {
         },
         {
           name: "Koen Club",
-          userId: 2,
           joinCode: "join the club",
+          userId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           name: "Susana Club",
-          userId: 2,
           joinCode: "join the club",
+          userId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
         },

@@ -20,8 +20,8 @@ router.get("/", async (req, res) => {
 //post request to create thye club
 router.post("/", auth, async (req, res) => {
   try {
-    const userId = req.body.userId;
-    //const userId = req.user.id;
+    //const userId = req.body.userId;
+    const userId = req.user.id;
     console.log("userId", userId);
 
     const { name, joinCode } = req.body;
