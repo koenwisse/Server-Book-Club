@@ -13,10 +13,7 @@ module.exports = {
       //   type: Sequelize.INTEGER,
       //   allowNull: false,
       // },
-      clubId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
+
       startDate: {
         type: Sequelize.STRING,
       },

@@ -17,13 +17,10 @@ module.exports = (sequelize, DataTypes) => {
     {
       // @Swen just to be sure, we need to delete bookId from DB table BookDiscusion and arrange that in our endpoint (instead of in DB table) right?
       // bookId: {
-      //   type: DataTypes.INTEGER,
+      //   type: DataTypes.STRING,
       //   allowNull: false,
       // },
-      clubId: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
+
       startDate: DataTypes.STRING,
       endDate: DataTypes.STRING,
     },
