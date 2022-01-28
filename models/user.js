@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       //one-to-many
       user.hasMany(models.club);
+      user.belongsTo(models.bookDiscussionComment);
       // many-to many
       user.belongsToMany(models.clubs, {
         through: "userClub",
