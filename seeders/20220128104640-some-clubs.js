@@ -6,30 +6,9 @@ module.exports = {
       "clubs",
       [
         {
-          name: "Teja Club",
+          name: "React Club",
           joinCode: "join the club",
-          userId: 2,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          name: "Koen Club",
-          joinCode: "join the club",
-          userId: 2,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          name: "Susana Club",
-          joinCode: "join the club",
-          userId: 2,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          name: "Andre Club",
-          joinCode: "join the club",
-          userId: 2,
+          userId: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
