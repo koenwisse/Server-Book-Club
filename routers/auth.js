@@ -3,10 +3,13 @@ const { Router } = require("express");
 const { toJWT } = require("../auth/jwt");
 const authMiddleware = require("../auth/middleware");
 const User = require("../models/").user;
+const Club = require("../models/").club;
+
 const { SALT_ROUNDS } = require("../config/constants");
 
 const router = new Router();
 
+//login
 router.post("/login", async (req, res, next) => {
   try {
     const { email, password } = req.body;
@@ -34,6 +37,7 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
+//signup
 router.post("/signup", async (req, res) => {
   const { email, password, name } = req.body;
   if (!email || !password || !name) {
@@ -60,6 +64,29 @@ router.post("/signup", async (req, res) => {
     }
 
     return res.status(400).send({ message: "Something went wrong, sorry" });
+  }
+});
+
+// Get all the clubs of one user
+router.get("/user", async (req, res) => {
+  try {
+    const user = await User.findAll({ include: Club });
+    console.log("Hiiiii", user);
+    res.status(200).send({ message: "ok", user });
+  } catch (e) {
+    console.log(e.message);
+  }
+});
+
+// Get all the clubs of one user
+router.get("/user/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    console.log(id);
+    const userClubs = await User.findByPk(id, { include: Club });
+    res.status(200).send({ message: "ok", userClubs });
+  } catch (e) {
+    console.log(e.message);
   }
 });
 
